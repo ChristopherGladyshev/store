@@ -2,8 +2,6 @@ import React from 'react';
 
 export const App = () => {
   return (
-    <div className="App">
-      Hello
-    </div>
+    <div className="App"></div>
   );
 }
