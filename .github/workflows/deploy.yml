@@ -25,4 +25,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . rim@194.87.239.49:/var/www/store/html
+      - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . rim@194.87.239.49:/var/www/store.ru/html
