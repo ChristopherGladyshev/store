@@ -1,0 +1,17 @@
+.header {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--black-color);
+  }
+
+  &__search {
+
+  }
+}

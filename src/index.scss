@@ -1,12 +1,2 @@
-html,
-body,
-#root {
-    height: 100%;
-    width: 100%;
-}
-
-.Work {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import '~normalize-scss/sass/normalize/import-now';
+@import './style/';

@@ -1,12 +1,25 @@
 import React from 'react';
+import { createContext } from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import { App } from './App';
+import App  from './App';
+import { Store } from './store';
 import reportWebVitals from './reportWebVitals';
+
+import './index.scss';
+
+
+const store = new Store();
+interface State {
+  store: Store;
+}
+export const Context = createContext<State>({ store });
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Context.Provider value={{ store }}>
+      <App />
+    </Context.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
