@@ -29,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "cd build && rsync --archive --compress --delete . rim@194.87.239.49:/var/www/store.ru/html"
   },
   "eslintConfig": {
     "extends": [

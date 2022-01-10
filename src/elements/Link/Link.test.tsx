@@ -7,6 +7,6 @@ import Link from './Link';
 describe("Link", () => {
   it('renders learn react link', () => {
     const link = render(<Link href='https://test.com' >Clik</Link>);
-    expect(link.getByText(/Clik/i));
+    expect(link.getByText(/Clik/i)).toHaveAttribute('href', 'https://test.com');
   });
 })
