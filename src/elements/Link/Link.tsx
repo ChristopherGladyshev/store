@@ -3,7 +3,7 @@ import React from 'react'
 interface Ilink {
   href?: string;
   classes?: string;
-  children?: React.ReactNode;
+  children?: React.ReactNode | string;
 }
 
 const Link = ({ href, classes, children}: Ilink) => {
