@@ -1,0 +1,12 @@
+.input {
+  padding-left: 6px;
+  border: 1px solid #111;
+  min-height: 38px;
+  box-shadow: 0 0 3px 1px rgba(221, 221, 221, 1);
+  border-radius: 8px;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}

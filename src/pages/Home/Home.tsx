@@ -1,11 +1,12 @@
 import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
+import { Listing } from "../../components";
 
 
 const Home: FC = () => {
   return (
     <div>
-      домашняя страница
+      <Listing/>
     </div>
   )
 }

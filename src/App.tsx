@@ -9,7 +9,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate
 } from 'react-router-dom';
 
 const App: FC = () => {
@@ -29,10 +28,6 @@ const App: FC = () => {
         <Route path={'/basket'} element={<Basket />} />
         <Route path={'/listing'} element={<Listing />} />
         <Route path={'/login'} element={<Login />} />
-        <Route
-          path="*"
-          element={<Navigate to="/" />}
-        />
       </Routes>
       <Footer/>
     </Router>
