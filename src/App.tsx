@@ -24,10 +24,10 @@ const App: FC = () => {
     <Router>
       <Header/>
       <Routes>
-        <Route path={'/'} element={<Home />} />
-        <Route path={'/basket'} element={<Basket />} />
-        <Route path={'/listing'} element={<Listing />} />
-        <Route path={'/login'} element={<Login />} />
+        <Route path={'/store'} element={<Home />} />
+        <Route path={'/store/basket'} element={<Basket />} />
+        <Route path={'/store/listing'} element={<Listing />} />
+        <Route path={'/store/login'} element={<Login />} />
       </Routes>
       <Footer/>
     </Router>
