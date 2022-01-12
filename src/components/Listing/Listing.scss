@@ -2,7 +2,14 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 1em;
+    grid-column-gap: 1.3em;
+    grid-row-gap: 1.3em;
+
+    @media screen and (max-width: 776px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 550px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

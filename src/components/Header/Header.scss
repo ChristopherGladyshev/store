@@ -12,8 +12,17 @@
     cursor: pointer;
     color: var(--blackcolor);
     padding-right: 2em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: all .3s;
 
-    &:last-child{
+    &:hover {
+      color: rgb(89, 89, 89);
+      text-decoration: underline;
+    }
+
+    &:last-child {
       padding-right: 0rem;
     }
   }
