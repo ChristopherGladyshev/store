@@ -1,4 +1,20 @@
 .button {
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: all .3s;
+
+  &:hover {
+    background: black;
+    color: #fff;
+  }
+
+
+
   &--add-to-bascet {
     background: #fff;
     cursor: pointer;

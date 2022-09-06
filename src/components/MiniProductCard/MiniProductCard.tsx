@@ -27,7 +27,7 @@ const MiniProductCard = ({ href, urlImage, className, price, priceOld, name }: I
             {name}
           </div>
           <div className='mini-card__button '>
-            <Button className='button--add-to-bascet'>В корзину</Button>
+            <Button className='--add-to-bascet'>В корзину</Button>
           </div>
         </div>
       </div>

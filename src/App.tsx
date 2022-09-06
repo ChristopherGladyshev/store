@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import { FC, useContext } from 'react';
 import { Context } from '.';
-import { Home, Listing, Basket, Login } from './pages';
+import { Home, Listing, Basket, Login, Admin } from './pages';
 import { Header, Footer } from './components';
 
 import {
@@ -28,6 +28,7 @@ const App: FC = () => {
         <Route path={'/store/basket'} element={<Basket />} />
         <Route path={'/store/listing'} element={<Listing />} />
         <Route path={'/store/login'} element={<Login />} />
+        <Route path={'/store/admin'} element={<Admin />} />
       </Routes>
       <Footer/>
     </Router>

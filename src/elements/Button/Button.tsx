@@ -3,13 +3,14 @@ import React from 'react'
 import './Button.scss';
 
 interface IButton {
-  className: string;
+  className?: string;
   children: React.ReactNode | string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => any;
 }
 
-const Button = ({ children, className }: IButton) => {
+const Button = ({ children, className = '', onClick }: IButton) => {
   return (
-    <button className={className}>{children}</button>
+    <button onClick={onClick} className={`button${className}`}>{children}</button>
   )
 }
 

@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header>
       <div className="header__container container">
-        <Link href={'/'} classes={'header-link'} >
+        <Link href={'/store'} classes={'header-link'} >
           <Image src={logo} />
         </Link>
 
@@ -17,10 +17,10 @@ const Header = () => {
         </div>
 
         <nav className='header__link-wraapper'>
-          <Link href={'/listing'} classes={'header-link header__link'} >Каталог</Link>
-          <Link href={'/basket'} classes={'header-link header__link'} >Корзина</Link>
-          <Link href={'/'} classes={'header-link header__link'} >Избранное</Link>
-          <Link href={'/'} classes={'header-link header__link'} >Войти</Link>
+          <Link href={'/store/listing'} classes={'header-link header__link'} >Каталог</Link>
+          <Link href={'/store/basket'} classes={'header-link header__link'} >Корзина</Link>
+          <Link href={'/store'} classes={'header-link header__link'} >Избранное</Link>
+          <Link href={'/store'} classes={'header-link header__link'} >Войти</Link>
         </nav>
       </div>
     </header>
