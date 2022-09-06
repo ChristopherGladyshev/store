@@ -5,7 +5,7 @@ import './Admin.scss';
 
 const Admin = () => {
   const [header, setheader] = useState('');
-  const sendForm = (e: MouseEvent) => {
+  const sendForm = (e: any) => {
     e.preventDefault();
   }
   return (
@@ -27,7 +27,7 @@ const Admin = () => {
           <Input type='text' placeholder='Header'>Header</Input>
         </div>
         <div>
-          <Button onClick={(e) => sendForm(e)} >Отправить</Button>
+          <Button onClick={(event) => sendForm(event)} >Отправить</Button>
         </div>
       </form>
     </div>
