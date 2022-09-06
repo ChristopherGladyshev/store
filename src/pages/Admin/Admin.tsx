@@ -4,7 +4,6 @@ import { Input, Button } from '../../elements'
 import './Admin.scss';
 
 const Admin = () => {
-  const [header, setheader] = useState('');
   const sendForm = (e: any) => {
     e.preventDefault();
   }
