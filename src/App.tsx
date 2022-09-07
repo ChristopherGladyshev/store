@@ -25,10 +25,10 @@ const App: FC = () => {
       <Header/>
       <Routes>
         <Route path={'/store'} element={<Home />} />
-        <Route path={'/store/basket'} element={<Basket />} />
-        <Route path={'/store/listing'} element={<Listing />} />
-        <Route path={'/store/login'} element={<Login />} />
-        <Route path={'/store/admin'} element={<Admin />} />
+        <Route path={'/basket'} element={<Basket />} />
+        <Route path={'/listing'} element={<Listing />} />
+        <Route path={'/login'} element={<Login />} />
+        <Route path={'/admin'} element={<Admin />} />
       </Routes>
       <Footer/>
     </Router>
