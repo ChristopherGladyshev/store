@@ -1,8 +1,16 @@
+@import '../../style/mixin/screen-mixin';
+@import '../../style/variables/color';
+@import '../../style/mixin/screen-mixin';
+@import '../../style/mixin/felx-mixins';
+
 .header {
-  &__container {
-    display: flex;
+
+  @include flex-with-position(center, flex-end);
+  margin-bottom: 20px !important;
+  margin-top: 10px !important;
+
+  @include view-tablet {
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 40px !important;
     margin-top: 20px !important;
   }
@@ -11,11 +19,18 @@
     text-decoration: none;
     cursor: pointer;
     color: var(--blackcolor);
-    padding-right: 2em;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .1rem;
     transition: all .3s;
+    margin-bottom: 10px;
+    font-size: 24px;
+
+    @include view-tablet {
+      font-weight: 500;
+      padding-right: 2em;
+      font-size: 20px;
+    }
 
     &:hover {
       color: rgb(89, 89, 89);
@@ -25,10 +40,84 @@
     &:last-child {
       padding-right: 0rem;
     }
+
+    &-wraapper {
+      @include flex-column-with-position(flex-start, center);
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $azure-color;
+      z-index: 9;
+      padding: 0 40px;
+      transform: translateX(-100%);
+      transition: transform .3s;
+
+      @include view-tablet {
+        position: initial;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+        padding: 0;
+        transform: translateX(0);
+      }
+
+      &--active {
+        transform: translateX(0);
+        body {
+          overflow: hidden;
+        }
+      }
+    }
   }
 
   &__search {
     width: 100%;
     padding: 0 1.5rem;
+  }
+
+  .burger {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 46px;
+    left: 20px;
+    background: $maximum-blue-color;
+    display: block;
+    z-index: 10;
+
+    &:hover {
+      background: $primary-color;
+
+      &::before,
+      &::after {
+        background: $primary-color;
+      }
+    }
+
+    @include view-tablet {
+      display: none;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      width: 30px;
+      height: 2px;
+      background: $maximum-blue-color;
+      position: absolute;
+    }
+
+    &::after {
+      top: -8px;
+      right: 0px;
+    }
+
+    &::before {
+      top: 8px;
+      right: 0px;
+    }
   }
 }

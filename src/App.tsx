@@ -24,7 +24,7 @@ const App: FC = () => {
     <Router>
       <Header/>
       <Routes>
-        <Route path={'/store'} element={<Home />} />
+        <Route path={'/'} element={<Home />} />
         <Route path={'/basket'} element={<Basket />} />
         <Route path={'/listing'} element={<Listing />} />
         <Route path={'/login'} element={<Login />} />

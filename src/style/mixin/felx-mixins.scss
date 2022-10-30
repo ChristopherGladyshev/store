@@ -1,0 +1,20 @@
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-with-position($align-items, $justify-content) {
+  @include flex();
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin flex-column-with-position($align-items, $justify-content) {
+  @include flex-column();
+  align-items: $align-items;
+  justify-content: $justify-content;
+}

@@ -1,2 +1,4 @@
 @import './base';
-@import './color.scss';
+@import './variables/color';
+@import './mixin/felx-mixins';
+@import './mixin/text-mixins';

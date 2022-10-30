@@ -6,7 +6,7 @@ interface Ilink {
   children?: React.ReactNode | string;
 }
 
-const Link = ({ href, classes, children}: Ilink) => {
+const Link = ({ href, classes, children }: Ilink) => {
   return (
     <a className={classes} href={href}>{children}</a>
   )

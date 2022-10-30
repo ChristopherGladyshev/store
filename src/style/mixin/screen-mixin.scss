@@ -1,0 +1,13 @@
+@import '../variables/breakpoints';
+
+@mixin view-tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin view-desctop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
