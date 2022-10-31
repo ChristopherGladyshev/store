@@ -1,0 +1,73 @@
+@import '../../style/mixin/screen-mixin';
+@import '../../style/variables/color';
+
+.burger {
+  position: relative;
+  display: block;
+  z-index: 10;
+  width: 30px;
+  display: flex;
+  height: 30px;
+  cursor: pointer;
+
+  &__line {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: 13px;
+    left: 0;
+    background: $maximum-blue-color;
+    transition: all .3s;
+
+    &--top,
+    &--bottom {
+      width: 30px;
+      height: 2px;
+      background: $maximum-blue-color;
+      position: absolute;
+      transition: all .3s;
+    }
+
+    &--top {
+      top: 4px;
+      right: 0px;
+    }
+
+    &--bottom {
+      top: 22px;
+      right: 0px;
+    }
+  }
+
+  &:hover .burger__line {
+    background: $primary-color;
+
+    &--top,
+    &--bottom {
+      background: $primary-color;
+    }
+  }
+
+  &--active .burger__line {
+    background: $primary-color;
+
+    &--center {
+      transform: scale(0);
+    }
+
+    &--top {
+      transform: rotate(140deg);
+      top: 13px;
+    }
+
+    &--bottom {
+      transform: rotate(-140deg);
+      top: 13px;
+    }
+
+  }
+
+  @include view-tablet {
+    display: none;
+  }
+}

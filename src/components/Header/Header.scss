@@ -5,14 +5,13 @@
 
 .header {
 
-  @include flex-with-position(center, flex-end);
-  margin-bottom: 20px !important;
-  margin-top: 10px !important;
+  @include flex-with-position(center, space-between);
+  margin--bottom: 20px !important;
+  margin--top: 10px !important;
 
   @include view-tablet {
-    justify-content: space-between;
-    margin-bottom: 40px !important;
-    margin-top: 20px !important;
+    margin--bottom: 40px !important;
+    margin--top: 20px !important;
   }
 
   &__link {
@@ -23,7 +22,7 @@
     text-transform: uppercase;
     letter-spacing: .1rem;
     transition: all .3s;
-    margin-bottom: 10px;
+    margin--bottom: 10px;
     font-size: 24px;
 
     @include view-tablet {
@@ -66,6 +65,7 @@
 
       &--active {
         transform: translateX(0);
+
         body {
           overflow: hidden;
         }
@@ -76,48 +76,5 @@
   &__search {
     width: 100%;
     padding: 0 1.5rem;
-  }
-
-  .burger {
-    width: 30px;
-    height: 2px;
-    position: absolute;
-    top: 46px;
-    left: 20px;
-    background: $maximum-blue-color;
-    display: block;
-    z-index: 10;
-
-    &:hover {
-      background: $primary-color;
-
-      &::before,
-      &::after {
-        background: $primary-color;
-      }
-    }
-
-    @include view-tablet {
-      display: none;
-    }
-
-    &::after,
-    &::before {
-      content: '';
-      width: 30px;
-      height: 2px;
-      background: $maximum-blue-color;
-      position: absolute;
-    }
-
-    &::after {
-      top: -8px;
-      right: 0px;
-    }
-
-    &::before {
-      top: 8px;
-      right: 0px;
-    }
   }
 }

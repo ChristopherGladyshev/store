@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Image } from '../../elements';
+import { Image, Burger } from '../../elements';
 import logo from '../../images/logo.png';
-import { lock, unlock } from 'tua-body-scroll-lock'
+import { lock, unlock } from 'tua-body-scroll-lock';
 
 import './Header.scss';
 
@@ -18,10 +18,10 @@ const Header = () => {
   return (
     <header>
       <div className="container header">
+        <Burger isNav={isNav} onClick={burgerClick} />
         <Link className='header-link' to={'/'}>
           <Image src={logo} />
         </Link>
-        <div className='burger' onClick={burgerClick}></div>
         <nav onClick={burgerClick} ref={ref}
           className={`header__link-wraapper ${isNav ? 'header__link-wraapper--active' : ''}`}>
           <Link className='header-link header__link' to={'/listing'}>

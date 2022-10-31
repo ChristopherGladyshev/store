@@ -1,13 +1,21 @@
+@import '../../style/mixin/screen-mixin';
+
 .listing {
   &__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 1.3em;
-    grid-row-gap: 1.3em;
+    grid-column-gap: 1.0em;
+    grid-row-gap: 1.0em;
+
+    @include view-tablet {
+      grid-column-gap: 1.3em;
+      grid-row-gap: 1.3em;
+    }
 
     @media screen and (max-width: 776px) {
       grid-template-columns: repeat(3, 1fr);
     }
+
     @media screen and (max-width: 550px) {
       grid-template-columns: repeat(2, 1fr);
     }
