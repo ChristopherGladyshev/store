@@ -1,12 +1,15 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Image, Burger } from '../../elements';
 import logo from '../../images/logo.png';
 import { lock, unlock } from 'tua-body-scroll-lock';
 
 import './Header.scss';
+import { Context } from '../..';
+import { observer } from 'mobx-react-lite';
 
 const Header = () => {
+  const { store } = useContext(Context);
   const [isNav, setIsNav] = useState(false);
   const ref = useRef(null);
   const burgerClick = () => {
@@ -28,7 +31,7 @@ const Header = () => {
             Каталог
           </Link>
           <Link className='header-link header__link' to={'/basket'}>
-            Корзина
+            Корзина <span>{store.basket.counter}</span>
           </Link>
           <Link className='header-link header__link' to={'/store'}>
             Избранное
@@ -39,4 +42,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default observer(Header);

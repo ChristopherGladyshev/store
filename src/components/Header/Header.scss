@@ -4,10 +4,9 @@
 @import '../../style/mixin/felx-mixins';
 
 .header {
-
   @include flex-with-position(center, space-between);
-  margin--bottom: 20px !important;
-  margin--top: 10px !important;
+  margin-bottom: 20px !important;
+  margin-top: 10px !important;
 
   @include view-tablet {
     margin--bottom: 40px !important;
@@ -22,7 +21,7 @@
     text-transform: uppercase;
     letter-spacing: .1rem;
     transition: all .3s;
-    margin--bottom: 10px;
+    margin-bottom: 10px;
     font-size: 24px;
 
     @include view-tablet {

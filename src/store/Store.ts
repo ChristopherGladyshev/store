@@ -4,11 +4,14 @@ import AuthService from '../services/AuthService';
 import axios from 'axios';
 import { AuthResponse } from '../modeles/response/AuthResponse';
 import { API_URL } from '../http';
+import { IBasket } from '../modeles/IBasket';
+import BasketService from '../services/BasketService';
 
 export class Store {
   user = {} as IUser;
   isAuth = false;
   isLoading = false;
+  basket = {} as IBasket;
 
   constructor() {
     makeAutoObservable(this);
@@ -24,6 +27,19 @@ export class Store {
 
   setLoading(bool: boolean) {
     this.isLoading = bool;
+  }
+
+  setBasket(basket: IBasket) {
+    this.basket = basket;
+  }
+
+  async addBasket(user: IUser) {
+    try {
+      const response = await BasketService.fetchBasket(user);
+      this.setBasket(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   async login(email: string, password: string) {

@@ -1,4 +1,6 @@
-import React from 'react'
+import { observer } from 'mobx-react-lite';
+import React, { useContext } from 'react'
+import { Context } from '../..';
 import { Image, Link, Button } from '../../elements';
 
 import './MiniProductCard.scss';
@@ -13,6 +15,12 @@ interface IMiniProductCard {
 }
 
 const MiniProductCard = ({ href, urlImage, className, price, priceOld, name }: IMiniProductCard) => {
+  const { store } = useContext(Context);
+  const addBasket = () => {
+    if (!store.basket.counter) return store.setBasket({counter: 1})
+    store.setBasket({counter: ++store.basket.counter})
+  }
+
   return (
     <div className='mini-card'>
       <div className='mini-card__wrapper'>
@@ -27,7 +35,7 @@ const MiniProductCard = ({ href, urlImage, className, price, priceOld, name }: I
             {name}
           </div>
           <div className='mini-card__button '>
-            <Button className='--add-to-bascet'>В корзину</Button>
+            <Button className='--add-to-bascet' onClick={addBasket}>В корзину</Button>
           </div>
         </div>
       </div>
@@ -35,4 +43,4 @@ const MiniProductCard = ({ href, urlImage, className, price, priceOld, name }: I
   )
 }
 
-export default MiniProductCard
+export default observer(MiniProductCard);
